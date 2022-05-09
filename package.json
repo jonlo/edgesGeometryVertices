@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"main": "index.js",
 	"scripts": {
-		"dev": "set NODE_ENV=development && webpack-dev-server --progress ",
+		"dev": "node npm_dev_script",
 		"build": "node npm_prod_script"
 	},
 	"keywords": [],

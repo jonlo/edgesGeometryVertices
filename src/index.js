@@ -1,5 +1,6 @@
 import { WebGLRenderer, Scene, PerspectiveCamera, BoxGeometry, MeshBasicMaterial, Mesh } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GeometryEdgeVertices } from './EdgesGeometryVertices';
 
 var container,
 	camera,
@@ -30,8 +31,9 @@ function main() {
 	controls = new OrbitControls(camera, renderer.domElement);
 	//controls.update() must be called after any manual changes to the camera's transform
 	controls.update();
-	createCube();
-	
+	let cube = createCube();
+	console.log(GeometryEdgeVertices.getVertices(cube));
+
 
 };
 
